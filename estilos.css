@@ -1,0 +1,181 @@
+a {
+    color: blue;
+    text-decoration: underline;
+    text-align: right;
+    display: block;
+}
+
+a,
+button:hover {
+    cursor: pointer;
+}
+
+/* #tela_inicial{
+
+} */
+
+#body_home {
+    background: url("img/4.png");
+    background-size: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#tela_inicial {
+    margin-top: 12%;
+    padding: 30px;
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#form_post button {
+    width: 100%;
+    height: 37px;
+    border-radius: 7px;
+    font-size: 13pt;
+    background-color: rgb(164, 171, 204);
+}
+
+#tela_inicial button {
+    width: 100%;
+    height: 37px;
+    border-radius: 7px;
+    font-size: 13pt;
+    background-color: rgb(164, 171, 204);
+}
+
+button:hover {
+    background-color: rgb(114, 125, 188);
+}
+
+#tela_inicial input {
+    width: 97.7%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#body_post header {
+    background-color: white;
+    height: 80px;
+}
+
+#body_post section {
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(224, 228, 253);
+}
+
+#form_post {
+    background-color: white;
+    border-radius: 25px;
+    width: 500px;
+    height: 600px;
+    padding: 30px;
+}
+
+#form_post input,
+textarea,
+select {
+    width: 97.7%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 13pt;
+}
+
+textarea {
+    height: 200px;
+}
+
+#menubutton {
+    background-color: rgb(114, 125, 188);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#menubutton:hover {
+    background-color: rgb(114, 125, 188);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    height: 10px;
+    margin-left: 10px;
+}
+
+.submenu {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    min-width: 200px;
+}
+
+.submenu a {
+    color: rgb(114, 125, 188);
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+#body_post a {
+    margin-right: 15px;
+}
+
+#menu_nav {
+    display: flex;
+}
+
+#body_list section {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(224, 228, 253);
+}
+
+.post {
+    background-color: rgb(114, 125, 188);
+    border-radius: 10px;
+    width: 800px;
+}
+
+.conteudopost {
+    background-color: rgb(224, 228, 253);
+    margin: 15px 15px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.titulopost {
+    color: rgb(164, 171, 204);
+}
+
+.textopost {
+    font-size: 14pt;
+}
+
+.botao img {
+    width: 30px;
+}
+
+.postbotoes {
+    display: flex;
+    align-items: center;
+}
+
+.botao {
+    margin-left: 10px;
+}

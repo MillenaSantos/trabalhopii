@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Login</title>
+
+</head>
+
+<script>
+    function login_cadastro(id1, id2) {
+        document.getElementById(id1).style.display = "none";
+        document.getElementById(id2).style.display = "";
+    }
+</script>
+
+<body id="body_home">
+    <br>
+    <div id="tela_inicial">
+        <div id="login">
+            <h2>Login</h2>
+            <form action="form_login.php" method="POST">
+                <label for="nome">Usuário: </label>
+                <input type="text" name="usuario" id="usuario" required>
+                <br>
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" id="senha" required>
+                <br>
+                <br>
+                <a onclick="login_cadastro('login', 'cadastro')">Não tem login? Faça
+                    cadastro</a>
+                <br><br>
+                <div id="button">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+        <div id="cadastro" style="display: none;">
+            <h2>Cadastro</h2>
+            <form id=" form_cadastro" action="form_cadastro.php" method="POST">
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" required>
+                <br>
+                <label for="usuario">Usuário: </label>
+                <input type="text" name="usuario" id="usuario" required>
+                <br>
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" id="senha" required>
+                <br>
+                <a onclick="login_cadastro('cadastro', 'login')">Já tem cadastro? Faça
+                    login</a>
+                <br><br>
+                <div id="button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
