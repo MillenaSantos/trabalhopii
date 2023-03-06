@@ -50,10 +50,9 @@ function select_post_id($id_post) {
 
 function editar_post($id_post, $tt_post, $id_tipo, $id_nicho, $ds_post) {
 	global $conn;
-	$sql = "UPDATE trabalhopi.tb_post set tt_post='$tt_post' and id_tipo=$id_tipo and id_nicho=$id_nicho and ds_post='$ds_post' where id_post=$id_post";
+	$sql = "UPDATE trabalhopi.tb_post set tt_post='$tt_post', id_tipo=$id_tipo, id_nicho=$id_nicho, ds_post='$ds_post' where id_post=$id_post";
     $conn->query($sql);
-	console.log("entrei");
-	//header("location: pag1.php");
+	header("location: pag1.php");
 
 	return null;
 }

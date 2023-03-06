@@ -1,6 +1,6 @@
 <?php
 
-setcookie('login', null, -1, '/');
+setcookie('login');
 session_destroy();
 header("location: home.html");
 

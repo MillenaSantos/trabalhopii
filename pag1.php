@@ -1,3 +1,7 @@
+<?php
+    require_once("./verificacookie.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,44 +19,49 @@
         $posts = select_post();
     ?>
     <header>
-        <nav>
             <?php
-                //echo $_COOKIE['id'];
                 $login = $_COOKIE['login'];
-                echo "olá, $login";  
             ?>
-            <a href="session.php">Sair</a>
-            <br>
-            <a href="form_post.php">Criar post</a>
-        </nav>
-    </header>
-    <section>
-        <div class="post">
-            <?php
-                foreach($posts as $post){
-            ?>
-            <div class="conteudopost">
-            <div class="postinfo">
-
-                <div class="titulopost">
-                    <h2><?php echo $post['tt_post']?></h2>
-                </div>
-                <div class="textopost">
-                    <p><?php echo $post['ds_post']?></p>
-                </div>
-                </div>
-                <div class="postbotoes">
-                    <div class="botao">
-                        <a href="form_post.php?id=<?php echo $post['id_post']?>"><img src="img/escrever.png" alt=""></a>
-                    </div>
-                    <div class="botao">
-                    <a href="excluir_post.php?id=<?php echo $post['id_post']?>"><img src="img/excluir.png" alt=""></a>
-                    </div>
+            <div id="menu_nav">
+                <a href="pag1.php">Home</a>
+                <a href="form_post.php">Criar post</a>
+            </div>
+            <div class=dropdown>
+                <button id=menubutton><?php echo $login ?><img src="img/seta.png" alt=""></button>
+                <div class="submenu">
+                    <a href="session.php">Sair</a>
                 </div>
             </div>
-            <?php
-                }
-            ?>
+    </header>
+    <section>
+        <div class=section>
+            <div class="post">
+                <?php
+                    foreach($posts as $post){
+                ?>
+                <div class="conteudopost">
+                <div class="postinfo">
+
+                    <div class="titulopost">
+                        <h2><?php echo $post['tt_post']?></h2>
+                    </div>
+                    <div class="textopost">
+                        <p><?php echo $post['ds_post']?></p>
+                    </div>
+                    </div>
+                    <div class="postbotoes">
+                        <div class="botao">
+                            <a href="form_post.php?id=<?php echo $post['id_post']?>"><img src="img/escrever.png" alt=""></a>
+                        </div>
+                        <div class="botao">
+                        <a href="excluir_post.php?id=<?php echo $post['id_post']?>"><img src="img/excluir.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
     </section>
     <footer>

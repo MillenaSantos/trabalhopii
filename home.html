@@ -33,6 +33,20 @@
                 <a onclick="login_cadastro('login', 'cadastro')">Não tem login? Faça
                     cadastro</a>
                 <br><br>
+                <!--mensagem de erro-->
+                <script>
+                    var diverro = document.getElementById('errado');
+                    if(typeof(diverro) != 'undefined' && diverro != null){
+                        setTimeout(function(){
+                            
+                            var a = document.getElementById("errado");
+                            
+                            a.style="display:none"
+                            
+                        }, 3000);
+                    }
+                </script>
+                     
                 <div id="button">
                     <button type="submit">Entrar</button>
                 </div>

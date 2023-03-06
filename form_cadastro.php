@@ -5,7 +5,7 @@ function db_insert($nome, $usuario, $senha) {
 	$sql = "INSERT INTO trabalhopi.tb_usuario (nm_pessoa, nm_usuario, sn_usuario) VALUES ('$nome', '$usuario', '$senha')";
 	echo $sql;
     $conn->query($sql);
-	header("location: home.html");
+	header("location: home.php");
 	return null;
 }
 

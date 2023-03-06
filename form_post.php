@@ -1,3 +1,6 @@
+<?php
+    require_once("./verificacookie.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,18 +18,16 @@
     <header>
             <?php
                 $login = $_COOKIE['login'];
-                ?>
-                <div id="menu_nav">
-
-                    <a href="pag1.php">Home</a>
-                </div>
-                    <div class=dropdown>
-                        <button id=menubutton><?php echo $login ?><img src="img/seta.png" alt=""></button>
-                        <div class="submenu">
-                            <a href="session.php">Sair</a>
-                        </div>
+            ?>
+            <div id="menu_nav">
+                <a href="pag1.php">Home</a>
+            </div>
+                <div class=dropdown>
+                    <button id=menubutton><?php echo $login ?><img src="img/seta.png" alt=""></button>
+                    <div class="submenu">
+                        <a href="session.php">Sair</a>
                     </div>
-    
+            </div>
     </header>
     <section>
         <div id="form_post">
@@ -37,7 +38,15 @@
                 $post=select_post_id($_GET['id']);
             }
         ?>
-    <form action="<?php if(!ISSET($post)){echo 'insert_post.php'}else{ echo 'editar_post.php?id='$post['id_post']}?>" method="POST">
+    <form action="
+        <?php 
+            if(!ISSET($post)){
+                echo 'insert_post.php';
+            }else{ 
+                echo 'editar_post.php?id='.$post[0]['id_post'];
+            }
+        ?>" 
+        method="POST">
         <input placeholder="Título" type="text" name="titulo" id="titulo" value="<?php if(ISSET($post)){ echo $post[0]['tt_post'];}?>">
         <br><br>
         <label for="tipo">Tipo</label>

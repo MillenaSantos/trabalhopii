@@ -10,7 +10,9 @@ function db_verifica($usuario, $senha) {
         $result = $sth->fetchAll();
         setcookie('id', $result[0][0]);
         session_start();
-    } 
+    }else{
+        header("location: home.php?errado=true;");
+    }
     return $sth -> rowCount();
 }
 
